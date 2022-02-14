@@ -1,0 +1,63 @@
+.home{
+    background-color: lightcyan;
+}
+
+#pic {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    background: white;
+    padding: 1rem;
+}
+.sidebar {
+    position: absolute;
+    left: 550px;
+    padding: 0.3em;
+    width: 500px;
+    height: 30px;
+}
+.sidebar div {
+    float: left;
+    width: 80px;
+    height: 25px;
+    background-color: lightpink;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+  }
+.sidebar div:hover {
+    background-color: red;
+  }
+.zone{
+    position: absolute;
+    top: 45px;
+    left: 554px;
+    width: 450px;
+    height: 460px;
+    border: 2px solid black;
+    background: white;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+.zone div{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    background: white;
+    padding: 1rem;
+    margin: auto;
+}
+
+.zone div svg {
+    display: none;
+}
+.zone div:hover{
+    background-color: lightgreen;
+}
