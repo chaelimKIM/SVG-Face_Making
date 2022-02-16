@@ -327,27 +327,24 @@ function d1(){
     var side = document.getElementById("sidebar");
     
     var f_1 = document.getElementById("f_1")
-    var e_1 = document.getElementById("e_1")
+    var e_1 = document.getElementsByClassName("e_1")
     var n_1 = document.getElementById("n_1")
     var m_1 = document.getElementById("m_1")
     var f_2 = document.getElementById("f_2")
-    var e_2 = document.getElementById("e_2")
+    var e_2 = document.getElementsByClassName("e_2")
     var n_2 = document.getElementById("n_2")
     var m_2 = document.getElementById("m_2")
     var f_3 = document.getElementById("f_3")
-    var e_3 = document.getElementById("e_3")
+    var e_3 = document.getElementsByClassName("e_3")
     var n_3 = document.getElementById("n_3")
     var m_3 = document.getElementById("m_3")
     var f_4 = document.getElementById("f_4")
-    var e_4 = document.getElementById("e_4")
+    var e_4 = document.getElementsByClassName("e_4")
     var n_4 = document.getElementById("n_4")
     var m_4 = document.getElementById("m_4")
 
     if(side.value == "face"){
         f_1.style.display = "block";
-        e_1.style.display = "none";
-        n_1.style.display = "none";
-        m_1.style.display = "none";
         f_2.style.display = "none";
         f_3.style.display = "none";
         f_4.style.display = "none";
@@ -355,31 +352,27 @@ function d1(){
     else if(side.value == "face_color"){
     }
     else if(side.value == "eyes"){
-        f_1.style.display = "none";
-        e_1.style.display = "block";
-        n_1.style.display = "none";
-        m_1.style.display = "none";
-        e_2.style.display = "none";
-        e_3.style.display = "none";
-        e_4.style.display = "none";
-
+        for(var i=0; i<e_1.length; i++){
+            var e1 = e_1.item(i);
+            var e2 = e_2.item(i);
+            var e3 = e_3.item(i);
+            var e4 = e_4.item(i);
+            e1.style.display = "block"
+            e2.style.display = "none";
+            e3.style.display = "none";
+            e4.style.display = "none";
+        }
     }
     else if(side.value == "eyes_color"){
 
     }
     else if(side.value == "nose"){
-        f_1.style.display = "none";
-        e_1.style.display = "none";
         n_1.style.display = "block";
-        m_1.style.display = "none";
         n_2.style.display = "none";
         n_3.style.display = "none";
         n_4.style.display = "none";
     }
     else if(side.value == "mouth"){
-        f_1.style.display = "none";
-        e_1.style.display = "none";
-        n_1.style.display = "none";
         m_1.style.display = "block";
         m_2.style.display = "none";
         m_3.style.display = "none";
@@ -395,56 +388,56 @@ function d2(){
     var side = document.getElementById("sidebar");
     
     var f_1 = document.getElementById("f_1")
-    var e_1 = document.getElementById("e_1")
+    var e_1 = document.getElementsByClassName("e_1")
     var n_1 = document.getElementById("n_1")
     var m_1 = document.getElementById("m_1")
     var f_2 = document.getElementById("f_2")
-    var e_2 = document.getElementById("e_2")
+    var e_2 = document.getElementsByClassName("e_2")
     var n_2 = document.getElementById("n_2")
     var m_2 = document.getElementById("m_2")
     var f_3 = document.getElementById("f_3")
-    var e_3 = document.getElementById("e_3")
+    var e_3 = document.getElementsByClassName("e_3")
     var n_3 = document.getElementById("n_3")
     var m_3 = document.getElementById("m_3")
     var f_4 = document.getElementById("f_4")
-    var e_4 = document.getElementById("e_4")
+    var e_4 = document.getElementsByClassName("e_4")
     var n_4 = document.getElementById("n_4")
     var m_4 = document.getElementById("m_4")
 
-    f_1.style.display = "none";
-    f_2.style.display = "none";
-    f_3.style.display = "none";
-    f_4.style.display = "none";
-    e_1.style.display = "none";
-    e_2.style.display = "none";
-    e_3.style.display = "none";
-    e_4.style.display = "none";
-    n_1.style.display = "none";
-    n_2.style.display = "none";
-    n_3.style.display = "none";
-    n_4.style.display = "none";
-    m_1.style.display = "none";
-    m_2.style.display = "none";
-    m_3.style.display = "none";
-    m_4.style.display = "none";
-
     if(side.value == "face"){
         f_2.style.display = "block";
+        f_1.style.display = "none";
+        f_4.style.display = "none";
+        f_3.style.display = "none";
     }
     else if(side.value == "face_color"){
     }
     else if(side.value == "eyes"){
-        e_2.style.display = "block";
+        for(var i=0; i<e_1.length; i++){
+            var e1 = e_1.item(i);
+            var e2 = e_2.item(i);
+            var e3 = e_3.item(i);
+            var e4 = e_4.item(i);
+            e1.style.display = "none"
+            e2.style.display = "block";
+            e3.style.display = "none";
+            e4.style.display = "none";
+        }
     }
     else if(side.value == "eyes_color"){
 
     }
     else if(side.value == "nose"){
         n_2.style.display = "block";
-
+        n_1.style.display = "none";
+        n_3.style.display = "none";
+        n_4.style.display = "none";
     }
     else if(side.value == "mouth"){
         m_2.style.display = "block";
+        m_1.style.display = "none";
+        m_3.style.display = "none";
+        m_4.style.display = "none";
     }
     else{
         side.value = "none";
@@ -455,27 +448,24 @@ function d3(){
     var side = document.getElementById("sidebar");
     
     var f_1 = document.getElementById("f_1")
-    var e_1 = document.getElementById("e_1")
+    var e_1 = document.getElementsByClassName("e_1")
     var n_1 = document.getElementById("n_1")
     var m_1 = document.getElementById("m_1")
     var f_2 = document.getElementById("f_2")
-    var e_2 = document.getElementById("e_2")
+    var e_2 = document.getElementsByClassName("e_2")
     var n_2 = document.getElementById("n_2")
     var m_2 = document.getElementById("m_2")
     var f_3 = document.getElementById("f_3")
-    var e_3 = document.getElementById("e_3")
+    var e_3 = document.getElementsByClassName("e_3")
     var n_3 = document.getElementById("n_3")
     var m_3 = document.getElementById("m_3")
     var f_4 = document.getElementById("f_4")
-    var e_4 = document.getElementById("e_4")
+    var e_4 = document.getElementsByClassName("e_4")
     var n_4 = document.getElementById("n_4")
     var m_4 = document.getElementById("m_4")
 
     if(side.value == "face"){
         f_3.style.display = "block";
-        e_3.style.display = "none";
-        n_3.style.display = "none";
-        m_3.style.display = "none";
         f_1.style.display = "none";
         f_2.style.display = "none";
         f_4.style.display = "none";
@@ -483,31 +473,28 @@ function d3(){
     else if(side.value == "face_color"){
     }
     else if(side.value == "eyes"){
-        f_3.style.display = "none";
-        e_3.style.display = "block";
-        n_3.style.display = "none";
-        m_3.style.display = "none";
-        e_1.style.display = "none";
-        e_2.style.display = "none";
-        e_4.style.display = "none";
+        for(var i=0; i<e_1.length; i++){
+            var e1 = e_1.item(i);
+            var e2 = e_2.item(i);
+            var e3 = e_3.item(i);
+            var e4 = e_4.item(i);
+            e1.style.display = "none"
+            e2.style.display = "none";
+            e3.style.display = "block";
+            e4.style.display = "none";
+        }
     }
     else if(side.value == "eyes_color"){
 
     }
     else if(side.value == "nose"){
-        f_3.style.display = "none";
-        e_3.style.display = "none";
         n_3.style.display = "block";
-        m_3.style.display = "none";
         n_1.style.display = "none";
         n_2.style.display = "none";
         n_4.style.display = "none";
 
     }
     else if(side.value == "mouth"){
-        f_3.style.display = "none";
-        e_3.style.display = "none";
-        n_3.style.display = "none";
         m_3.style.display = "block";
         m_1.style.display = "none";
         m_2.style.display = "none";
@@ -523,27 +510,24 @@ function d4(){
     var side = document.getElementById("sidebar");
     
     var f_1 = document.getElementById("f_1")
-    var e_1 = document.getElementById("e_1")
+    var e_1 = document.getElementsByClassName("e_1")
     var n_1 = document.getElementById("n_1")
     var m_1 = document.getElementById("m_1")
     var f_2 = document.getElementById("f_2")
-    var e_2 = document.getElementById("e_2")
+    var e_2 = document.getElementsByClassName("e_2")
     var n_2 = document.getElementById("n_2")
     var m_2 = document.getElementById("m_2")
     var f_3 = document.getElementById("f_3")
-    var e_3 = document.getElementById("e_3")
+    var e_3 = document.getElementsByClassName("e_3")
     var n_3 = document.getElementById("n_3")
     var m_3 = document.getElementById("m_3")
     var f_4 = document.getElementById("f_4")
-    var e_4 = document.getElementById("e_4")
+    var e_4 = document.getElementsByClassName("e_4")
     var n_4 = document.getElementById("n_4")
     var m_4 = document.getElementById("m_4")
 
     if(side.value == "face"){
         f_4.style.display = "block";
-        e_4.style.display = "none";
-        n_4.style.display = "none";
-        m_4.style.display = "none";
         f_1.style.display = "none";
         f_2.style.display = "none";
         f_3.style.display = "none";
@@ -551,32 +535,29 @@ function d4(){
     else if(side.value == "face_color"){
     }
     else if(side.value == "eyes"){
-        f_4.style.display = "none";
-        e_4.style.display = "block";
-        n_4.style.display = "none";
-        m_4.style.display = "none";
-        e_1.style.display = "none";
-        e_2.style.display = "none";
-        e_3.style.display = "none";
+        for(var i=0; i<e_1.length; i++){
+            var e1 = e_1.item(i);
+            var e2 = e_2.item(i);
+            var e3 = e_3.item(i);
+            var e4 = e_4.item(i);
+            e1.style.display = "none"
+            e2.style.display = "none";
+            e3.style.display = "none";
+            e4.style.display = "block";
+        }
 
     }
     else if(side.value == "eyes_color"){
 
     }
     else if(side.value == "nose"){
-        f_4.style.display = "none";
-        e_4.style.display = "none";
         n_4.style.display = "block";
-        m_4.style.display = "none";
         n_1.style.display = "none";
         n_2.style.display = "none";
         n_3.style.display = "none";
 
     }
     else if(side.value == "mouth"){
-        f_4.style.display = "none";
-        e_4.style.display = "none";
-        n_4.style.display = "none";
         m_4.style.display = "block";
         m_1.style.display = "none";
         m_2.style.display = "none";
